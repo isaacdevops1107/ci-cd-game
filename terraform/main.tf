@@ -22,8 +22,8 @@ resource "aws_instance" "game_server" {
   }
 }
 
-resource "aws_security_group" "gamesathe-satheesh" {
-  name = "gamesathe-satheesh"
+resource "aws_security_group" "gamesathev2" {
+  name = "gamesathev2"
 
   ingress {
     from_port   = 22
