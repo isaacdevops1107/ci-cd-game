@@ -3,11 +3,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "game_server" {
-  ami           = "ami-019715e0d74f695be" 
-  instance_type = "t3.micro"
+  ami           = "ami-01a00762f46d584a1" 
+  instance_type = "t3.small"
   key_name      = "ubuntu"
 
-  security_groups = [aws_security_group.gamesathev2.name]
+  security_groups = [sg-03897d8aa9d37a3cb ]
 
   user_data = <<-EOF
               #!/bin/bash
