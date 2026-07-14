@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "game_server" {
   ami           = "ami-01a00762f46d584a1" 
   instance_type = "t3.small"
-  key_name      = "start"
+  key_name      = "trail"
 
   security_groups = [sg-03897d8aa9d37a3cb ]
 
