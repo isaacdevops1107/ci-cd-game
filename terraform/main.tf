@@ -1,13 +1,16 @@
 provider "aws" {
   region = "ap-south-1"
 }
+data "aws_vpc" "default" {
+  default = true
+}
 
 resource "aws_instance" "game_server" {
   ami           = "ami-01a00762f46d584a1" 
   instance_type = "t3.small"
   key_name      = "ubuntu"
 
-  security_groups = [sg-03897d8aa9d37a3cb]
+  vpc_security_group_ids = [aws_security_group.gamesathev2.id]
 
   user_data = <<-EOF
               #!/bin/bash
