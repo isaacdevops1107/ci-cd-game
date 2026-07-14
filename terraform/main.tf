@@ -10,7 +10,7 @@ resource "aws_instance" "game_server" {
   instance_type = "t3.small"
   key_name      = "ubuntu"
 
-  vpc_security_group_ids = [aws_security_group.gamesathev2.id]
+  vpc_security_group_ids = [aws_security_group.games.id]
 
   user_data = <<-EOF
               #!/bin/bash
@@ -25,8 +25,8 @@ resource "aws_instance" "game_server" {
   }
 }
 
-resource "aws_security_group" "gamesathev2" {
-  name = "gamesathev2"
+resource "aws_security_group" "games" {
+  name = "games"
  vpc_id = data.aws_vpc.default.id
 
   ingress {
