@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        KEY_PATH = "/var/lib/jenkins/start.pem"
+        KEY_PATH = "/var/lib/jenkins/ubuntu.pem"
     }
 
     stages {
