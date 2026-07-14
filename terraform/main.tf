@@ -24,6 +24,7 @@ resource "aws_instance" "game_server" {
 
 resource "aws_security_group" "gamesathev2" {
   name = "gamesathev2"
+ vpc_id = data.aws_vpc.default.id
 
   ingress {
     from_port   = 22
