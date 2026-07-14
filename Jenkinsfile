@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/satheeshm5465-aws/ci-cd-game'
+                git branch: 'main', url: 'https://github.com/isaacdevops1107/ci-cd-game.git'
             }
         }
 
