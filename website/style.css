@@ -1,2 +1,65 @@
-body { text-align:center; font-family:Arial; background:#ffeaa7; }
-button { padding:10px 20px; margin:10px; font-size:18px; }
+/* --- STYLING (SAVE AS style.css) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0c20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#gameContainer {
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+canvas {
+    background: linear-gradient(135deg, #141124 0%, #241938 100%);
+    display: block;
+}
+
+#uiOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.btn {
+    background: linear-gradient(45deg, #ff007f, #7f00ff);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    pointer-events: auto;
+    box-shadow: 0 5px 15px rgba(255, 0, 127, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 0, 127, 0.6);
+}
+
+h1 {
+    font-size: 42px;
+    text-shadow: 0 0 10px #ff007f, 0 0 20px #7f00ff;
+    margin-bottom: 10px;
+}
