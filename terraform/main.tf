@@ -10,7 +10,7 @@ resource "aws_instance" "game_server" {
   instance_type = "t3.small"
   key_name      = "ubuntu"
 
-  vpc_security_group_ids = [aws_security_group.games.id]
+  vpc_security_group_ids = [aws_security_group.jj.id]
 
   user_data = <<-EOF
               #!/bin/bash
