@@ -7,7 +7,7 @@ data "aws_vpc" "default" {
 }
 
 resource "aws_security_group" "games" {
-  name        = "games-v2"
+  name        = "games-v3"
   description = "Managed by Terraform"
   vpc_id      = data.aws_vpc.default.id
 
